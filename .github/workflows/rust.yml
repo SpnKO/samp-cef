@@ -140,12 +140,12 @@ jobs:
     - name: Install nightly rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: nightly-2021-10-10-x86_64-pc-windows-msvc
+        toolchain: nightly-2023-10-10-x86_64-pc-windows-msvc
         override: true
 
     - uses: actions/checkout@v2
     - name: Build client
-      run: cargo +nightly build --target=nightly-2021-10-10-x86_64-pc-windows-msvc --release
+      run: cargo +nightly build --target=nightly-2023-10-10-x86_64-pc-windows-msvc --release
       shell: bash
 
     - name: Make a package
