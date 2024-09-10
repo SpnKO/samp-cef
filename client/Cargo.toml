@@ -15,7 +15,7 @@ crash_logger = ["winapi/processthreadsapi", "winapi/psapi", "winapi/excpt"]
 [dependencies]
 encoding_rs = "0.8.20"
 tokio = { version = "1.11", features = ["full"] }
-mio = { version = "0.7.14", features = ["os-poll", "net"] }
+mio = "0.7.14"
 client-api = { git = "https://github.com/zottce/samp-client-api.git", rev = "f4dd483" }
 cef = { path = "../cef" }
 cef-sys = { path = "../cef-sys" }
