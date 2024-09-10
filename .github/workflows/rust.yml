@@ -140,7 +140,7 @@ jobs:
     - name: Install nightly rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: nightly-i686
+        toolchain: nightly-2021-09-27-i686
         override: true
 
     - uses: actions/checkout@v2
