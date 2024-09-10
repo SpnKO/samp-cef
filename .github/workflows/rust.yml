@@ -145,7 +145,7 @@ jobs:
 
     - uses: actions/checkout@v2
     - name: Build client
-      run: cargo +nightly-2021-08-27-i686 build --release --package client --no-default-features
+      run: cargo +nightly-2021-08-27-i686 build --release
       shell: bash
 
     - name: Make a package
