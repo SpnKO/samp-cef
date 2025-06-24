@@ -159,27 +159,27 @@ jobs:
         7z a -tzip cef.zip cef.asi cef
       shell: bash
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: client.dll
         path: target/release/client.dll
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: renderer.exe
         path: target/release/renderer.exe
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: cef.asi
         path: target/release/loader.dll
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: cef-windows.dll
         path: target/release/server.dll
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: cef.zip
         path: redist/cef.zip
