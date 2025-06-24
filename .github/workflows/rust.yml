@@ -108,14 +108,14 @@ jobs:
 
     - name: DirectX SDK cache
       id: dx-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ${{ env.DX_SDK_DIR }}
         key: directx
 
     - name: CEF static library cache
       id: cef-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ${{ env.CEF_PATH }}
         key: libcef
@@ -143,7 +143,7 @@ jobs:
         toolchain: nightly-2021-10-02-i686
         override: true
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build client
       run: cargo +nightly-2021-10-02-i686 build --release
       shell: bash
@@ -159,27 +159,27 @@ jobs:
         7z a -tzip cef.zip cef.asi cef
       shell: bash
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: client.dll
         path: target/release/client.dll
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: renderer.exe
         path: target/release/renderer.exe
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: cef.asi
         path: target/release/loader.dll
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: cef-windows.dll
         path: target/release/server.dll
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: cef.zip
         path: redist/cef.zip
